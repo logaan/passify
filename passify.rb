@@ -19,7 +19,6 @@ site_name   = FileUtils.pwd.split(/\//).last.gsub(/_/, "-") + ".local"
 config_path = File.join("/etc/apache2/sites-enabled", site_name)
 
 # Error checking
-raise "Apache config is not writable. Got root?" unless File.writable?(config_path)
 raise "Hosts file is not writable. Got root?" unless File.writable?("/etc/hosts")
 raise "Apache is not executable. Got root?" unless File.executable?("/etc/init.d/apache2")
 
