@@ -27,6 +27,7 @@ config_contents = <<-CONF
 <VirtualHost *:80>
 	ServerName #{site_name}
 	DocumentRoot #{site_root}
+        RailsEnv development
 </VirtualHost>
 CONF
 File.open(config_path, "w+"){ |f| f.write(config_contents) }
